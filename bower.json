@@ -1,0 +1,17 @@
+{
+  "name": "ls-persist",
+  "description": "Easy way to set retrieve values in localStorage for a set limited amount of time",
+  "main": "dist/index.js",
+  "authors": [
+    "Zell Liew <zellwk@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/zellwk/ls-persist",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -2,9 +2,9 @@
   "name": "ls-persist",
   "version": "1.0.0",
   "description": "Easy way to set retrieve values in localStorage for a set limited amount of time",
-  "main": "index.js",
-  "author": "Zell Liew",
-  "license": "ISC",
+  "main": "dist/index.js",
+  "author": "Zell Liew <zellwk@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist && mkdir dist",
     "babel": "babel src/index.js -o dist/index.js --presets=es2015",

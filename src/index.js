@@ -1,22 +1,22 @@
-let def = {
+const lsPersistDefaults = {
   storedValueName: 'Z_STORED_VALUE',
   timestampName: 'Z_TIMESTAMP'
 }
 
-function hasValue (options = def) {
+function hasValue (options = lsPersistDefaults) {
   let isExpired = isExpiredTimestamp(options.timestampName)
   let storedValue = localStorage.getItem(options.storedValueName)
   return !isExpired && storedValue
 }
 
-function getValue (options = def) {
+function getValue (options = lsPersistDefaults) {
   return JSON.parse(localStorage.getItem(options.storedValueName))
 }
 
 function setValue (
   value,
   persistDurationInDays,
-  options = def
+  options = lsPersistDefaults
 ) {
   const oneDay = 1000 * 60 * 60 * 24
   let expiry = Date.now() + persistDurationInDays * oneDay
@@ -27,7 +27,7 @@ function setValue (
 function setRandomValue (
   values,
   persistDurationInDays,
-  options = def
+  options = lsPersistDefaults
 ) {
   let chosenValue = randomValue(values)
   setValue(chosenValue, persistDurationInDays, options)
